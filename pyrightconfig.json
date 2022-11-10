@@ -1,0 +1,24 @@
+{
+   
+    "exclude": [
+      "**/node_modules",
+      "**/.direnv",
+      "/__pycache__",
+    ],
+  
+    "ignore": [
+    ],
+  
+    "defineConstant": {
+      "DEBUG": false
+    },
+
+  
+    "reportMissingImports": true,
+    "reportMissingTypeStubs": false,
+  
+    "pythonVersion": "3.11",
+    "typeCheckingMode": "strict",
+
+    "django_settings_module": "django_tutorial.settings"
+  }
