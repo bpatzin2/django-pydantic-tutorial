@@ -14,9 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.http import HttpRequest
 from django.urls import include, path
+from ninja import NinjaAPI
 
-urlpatterns = [
+api = NinjaAPI()
+
+
+@api.get("/himom")
+def add(request: HttpRequest, a: int):
+    return {"result": a}
+
+urlpatterns = [ # type: ignore
     path('polls/', include('polls.urls')),
     path("admin/", admin.site.urls),
-]
+    path("api/", api.urls),  # type: ignore
+]   
