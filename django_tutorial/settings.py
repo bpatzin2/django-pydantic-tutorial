@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-jlbx%wtk&zp1t2y-&ni)$7c9or&wr0vew+@c(9^25#=+rzq8qw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
@@ -74,9 +74,13 @@ WSGI_APPLICATION = "django_tutorial.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": BASE_DIR / "postgres",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'djangotutorial',
+        'USER': 'brian',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
